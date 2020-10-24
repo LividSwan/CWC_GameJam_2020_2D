@@ -1,4 +1,5 @@
-﻿using GameJam.Input;
+﻿using GameJam.Core;
+using GameJam.Input;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,9 @@ namespace GameJam.Rhythm
 {
     public class ImpactZoneController : MonoBehaviour
     {
+        private CoreManager _coreManager;
         private InputController _inputController;
+        
         private SpriteRenderer _impactSpriteRenderer;
 
         public Sprite defaultImage;
@@ -16,7 +19,8 @@ namespace GameJam.Rhythm
 
         private void Awake()
         {
-            _inputController = InputController.Instance;
+            _coreManager = CoreManager.Instance;
+            _inputController = _coreManager.InputController;
         }
 
         private void OnEnable()

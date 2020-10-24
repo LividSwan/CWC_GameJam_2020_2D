@@ -1,4 +1,5 @@
-﻿using GameJam.Input;
+﻿using GameJam.Core;
+using GameJam.Input;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +14,13 @@ namespace GameJam.Rhythm
         private string _key1;
         private string _key2;
 
+        private float _removeAtX = -20;
+
         public bool canBePressed;
         public List<KeyCode> keyCodeList;
+
+        private float _beatTempo;
+        public float tempo;
 
         private void Awake()
         {
@@ -34,13 +40,24 @@ namespace GameJam.Rhythm
         // Start is called before the first frame update
         void Start()
         {
-
+            _beatTempo = tempo / 60f;
         }
 
         // Update is called once per frame
         void Update()
         {
+            //transform.position = Vector2.Lerp(
+            //    SpawnPos,
+            //    RemovePos,
+            //    (BeatsShownInAdvance - (beatOfThisNote - songPosInBeats)) / BeatsShownInAdvance
+            //    );
 
+            transform.position += new Vector3(-_beatTempo * Time.deltaTime, 0f);
+
+            if (transform.position.x < _removeAtX)
+            {
+                NotePool.Instance.ReturnToPool(this);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
