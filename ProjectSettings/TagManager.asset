@@ -45,3 +45,6 @@ TagManager:
   - name: NotesLayer
     uniqueID: 3055006009
     locked: 0
+  - name: Background
+    uniqueID: 3153187607
+    locked: 0

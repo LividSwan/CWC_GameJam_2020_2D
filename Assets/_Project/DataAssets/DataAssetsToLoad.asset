@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DataAssetsToLoad
   m_EditorClassIdentifier: 
   GenericAssetsToLoadLabelName: default
+  NotePrefabsLabel: Notes
