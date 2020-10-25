@@ -1,5 +1,6 @@
 ﻿using GameJam.Core;
 using GameJam.Statics;
+using GameJam.UI;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,11 +21,14 @@ namespace GameJam.UI
         private float yBounds = 4;
         private Vector3 bgDirection;
         public float bgSpeed;
+        public Animator animator;
+        private FadeEffect fadeEffectScript;
 
 
         public void Awake()
         {
             _coreManager = CoreManager.Instance;
+            fadeEffectScript = GameObject.Find("FadeEffect").GetComponent<FadeEffect>();
 
             background = GameObject.Find("Background");
             bgDirection = new Vector3(Random.Range(-1f, 1f), (Random.Range(-1f, 1f)), 0);
@@ -40,6 +44,7 @@ namespace GameJam.UI
 
         public void ButtonStartClick()
         {
+            fadeEffectScript.FadeOutEffect();
             _coreManager.SetGameState(CoreState.PLAY);
             StartCoroutine(StartGame());
         }
@@ -84,6 +89,7 @@ namespace GameJam.UI
 
             background.transform.Translate(bgDirection * Time.deltaTime * bgSpeed);
         }
+
 
     }
 }
