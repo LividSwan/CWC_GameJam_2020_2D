@@ -10,6 +10,10 @@ namespace GameJam.DataAsset
         [Header("AssetLabels")]
         public string GenericAssetsToLoadLabelName;
 
+        public string SongsDataLabel;
+
+        public string NotePrefabsLabel;
+
         //[Header("Text Assets to Load")]
         //public AssetReference TextAddress;
 
