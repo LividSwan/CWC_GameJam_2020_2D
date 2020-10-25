@@ -17,8 +17,22 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 315b6521ebe9e504c904b20da9d7ec7e
   m_SerializeEntries:
+  - m_GUID: 01dc330779583c943b8d1c691ab42b69
+    m_Address: Prefabs/Note_Blank.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Notes
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 059e2fcd351ea7e47824cdf85dc72d29
-    m_Address: Songs/SongInfo_01.asset
+    m_Address: Songs/SongInfo_0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Songs
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 14f4b88189ecffe4197c1d8f0036cb12
+    m_Address: Songs/SongInfo_02.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Songs
@@ -30,11 +44,11 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: ac1381a4a0f158c4b825b627bc3a4c54
-    m_Address: Assets/_Project/Prefabs/Note_Down.prefab
+  - m_GUID: 3a595494f09d53b44a38bd5fc8fc2569
+    m_Address: Songs/SongInfo_01.asset
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Notes
+    - Songs
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0

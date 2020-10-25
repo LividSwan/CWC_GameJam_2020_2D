@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87d223ac6e2c1164ea33e70c47ab2a62, type: 3}
-  m_Name: SongInfo_01
+  m_Name: SongInfo_02
   m_EditorClassIdentifier: 
   _id: 2
   _loreTextList: []
-  SongName: Battle1
-  SongAudioClip: {fileID: 8300000, guid: 87d4f3d5508ca64458061c616552c1bc, type: 3}
-  _beatTempo: 160
+  SongName: Battle2
+  SongAudioClip: {fileID: 8300000, guid: 812bcb03c9d66454fadabcc1e44f315d, type: 3}
+  _beatTempo: 180
