@@ -31,6 +31,7 @@ public class PlayerLevelMovement : MonoBehaviour
     {
         player.transform.Translate(moveAxis * Time.deltaTime * playerWalkSpeed);
 
+
     }
 
     private void OnEnable()
