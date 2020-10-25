@@ -42,12 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: NotesLayer
-    uniqueID: 3055006009
-    locked: 0
   - name: Background
     uniqueID: 3153187607
     locked: 0
   - name: Stairs
     uniqueID: 2340613777
+    locked: 0
+  - name: NotesLayer
+    uniqueID: 3055006009
     locked: 0

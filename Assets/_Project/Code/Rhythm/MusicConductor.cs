@@ -12,7 +12,6 @@ namespace GameJam.Rhythm
     {
 		private CoreManager _coreManager;
 
-
 		public enum Rank { PERFECT, GOOD, BAD, MISS };
 		public enum ArrowDirection { UP, DOWN, LEFT, RIGHT };
 
@@ -154,13 +153,15 @@ namespace GameJam.Rhythm
 			
 			if (beatTimer > secondsPerBeat && beatCounter < 6f)
 			{
-				ArrowDirection randomArrow = (ArrowDirection)_arrowDirections.GetValue(random.Next(_arrowDirections.Length));
+				var index = random.Next(_arrowDirections.Length);
+				ArrowDirection randomArrow = (ArrowDirection)_arrowDirections.GetValue(index);
+
 				Note newNote = notePool.Get();
                 newNote.SpawnNote(randomArrow,
                     new Vector3(startLineX, trackSpawnPosY[randomIndex]),
                     _songInfo._beatTempo,
                     removeLineX);
-				Debug.Log("Y position = " + trackSpawnPosY[randomIndex]);
+				
 				beatCounter++;
 				spawnedNotesCount++;
 			}
