@@ -19,17 +19,24 @@ namespace GameJam.Core
         [SerializeField] private AudioClip menuTheme0;
         [SerializeField] private AudioClip gameTheme0;
         [SerializeField] private AudioClip mistake;
+
         [SerializeField] private AudioClip battleTheme0;
         [SerializeField] private AudioClip downButton0;
         [SerializeField] private AudioClip leftButton0;
         [SerializeField] private AudioClip rightButton0;
         [SerializeField] private AudioClip upButton0;
-        
+
         [SerializeField] private AudioClip battleTheme1;
         [SerializeField] private AudioClip downButton1;
         [SerializeField] private AudioClip leftButton1;
         [SerializeField] private AudioClip rightButton1;
         [SerializeField] private AudioClip upButton1;
+
+        [SerializeField] private AudioClip battleTheme2;
+        [SerializeField] private AudioClip downButton2;
+        [SerializeField] private AudioClip leftButton2;
+        [SerializeField] private AudioClip rightButton2;
+        [SerializeField] private AudioClip upButton2;
 
 #pragma warning restore 0649
 
