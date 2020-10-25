@@ -23,6 +23,13 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 11400000, guid: 21209362362b1b04888fb957fd4067fb, type: 2}
     m_TargetAsset: {fileID: 11400000, guid: 21209362362b1b04888fb957fd4067fb, type: 2}
+  - m_GUID: ac1381a4a0f158c4b825b627bc3a4c54
+    m_Address: Assets/_Project/Prefabs/Note_Down.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Notes
+    m_MainAsset: {fileID: 6952249420967719405, guid: ac1381a4a0f158c4b825b627bc3a4c54, type: 3}
+    m_TargetAsset: {fileID: 6952249420967719405, guid: ac1381a4a0f158c4b825b627bc3a4c54, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f63b85ec8a772a440a8d58aaf879a4a4, type: 2}
   m_SchemaSet:
