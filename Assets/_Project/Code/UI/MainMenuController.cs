@@ -41,19 +41,25 @@ namespace GameJam.UI
 
         public void ButtonStartClick()
         {
-
             _coreManager.SetGameState(CoreState.PLAY);
+            StartCoroutine(StartGame());
+        }
+
+        IEnumerator StartGame()
+        {
+            //Print the time of when the function is first called.
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(3f);
+
+            //After we have waited 3 seconds print the time again.
+            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
 
             LevelLoader.LoadLevelDebug = true;
             StartCoroutine(LevelLoader.LoadNamedSceneAsync(startSceneToLoad,
                 () => Debug.Log("Load Complete : Do something cool here")
                 ));
-
-
-            //StartCoroutine(LevelLoader.LoadNamedSceneAsync(startSceneToLoad,
-            //    (float progress) => loadingBar.value = progress,
-            //    () => Debug.Log("Load Complete : Do something cool here")
-            //    ));
         }
 
         public void ButtonExitClick()
