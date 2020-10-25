@@ -67,6 +67,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Notes
+    - Songs
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 484cb88b333338b41ae097dcbd51e7d8, type: 2}

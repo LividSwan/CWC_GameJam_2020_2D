@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using GameJam.Core;
+using GameJam.DataAsset;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,7 +10,11 @@ namespace GameJam.Rhythm
 {
     public class MusicConductor : MonoBehaviour
     {
-        public enum Rank { PERFECT, GOOD, BAD, MISS };
+		private CoreManager _coreManager;
+
+
+
+		public enum Rank { PERFECT, GOOD, BAD, MISS };
 
 		public delegate void BeatOnHitAction(int trackNumber, Rank rank);
 		public static event BeatOnHitAction beatOnHitEvent;
@@ -20,18 +27,20 @@ namespace GameJam.Rhythm
 
 		//if the whole game is paused
 		public static bool paused = true;
-		private bool songStarted = false;
+		private bool _songStarted = false;
 
 		public static float pauseTimeStamp = -1f; //negative means not managed
 		private float pausedTime = 0f;
 
-		//private SongInfo songInfo;
+		private SongInfo _songInfo;
 
 		[Header("Spawn Points")]
-		public float[] trackSpawnPosY;
+		public float trackSpawnPosY;
 
 		public float startLineX;
 		public float finishLineX;
+
+		public float npcActivateLineX;
 
 		public float removeLineX;
 
@@ -39,45 +48,108 @@ namespace GameJam.Rhythm
 		public float goodOffsetX;
 		public float perfectOffsetX;
 
-		//different colors for each track
-		public Color[] trackColors;
+		[Header("Count Down Panel")]
+		public GameObject countDownPanel;
+		public TMP_Text countDownText;
+
+		private const int _countDownStart = 3;
+
+		[Header("Note Tracks")]
+		public GameObject noteTracks;
 
 		//current song position
 		public static float songposition;
 
 		//how many seconds for each beat
-		public static float crotchet;
-
-		//index for each tracks
-		private int[] trackNextIndices;
-
-		//queue, saving the MusicNodes which currently on screen
-		private Queue<Note>[] queueForTracks;
-
-		//multi-times notes might be paused on the finish line, but already dequed
-		private Note[] previousMusicNodes;
-
-		//keep a reference of the sound tracks
-		//private SongInfo.Track[] tracks;
+		public static float secondsPerBeat;
 
 		private float dsptimesong;
 
 		public static float BeatsShownOnScreen = 4f;
 
-		//count down canvas
-		private const int StartCountDown = 3;
-		public GameObject countDownCanvas;
-		public TextMeshPro countDownText;
+		
 
-		//layer each music node, so that the first one would be at the front
-		private const float LayerOffsetZ = 0.001f;
-		private const float FirstLayerZ = -6f;
-		private float[] nextLayerZ;
+		private AudioSource _audioSource;
 
-		//total tracks
-		private int len;
-		private AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+        private void Awake()
+        {
+			_coreManager = CoreManager.Instance;
+			_audioSource = GetComponent<AudioSource>();
+		}
 
+        private void Start()
+        {
+			//display countdown canvas
+			countDownPanel.SetActive(true);
+			noteTracks.SetActive(false);
 
-	}
+			//get the song info from Manager
+			_songInfo = _coreManager.GetCurrentSong();
+
+			//initialize fields
+			secondsPerBeat = 60f / _songInfo._beatTempo;
+			songLength = _songInfo.SongAudioClip.length;
+
+			//initialize audioSource
+			_audioSource.clip = _songInfo.SongAudioClip;
+
+			//start countdown
+			StartCoroutine(CountDown());
+		}
+
+		IEnumerator CountDown()
+		{
+			//yield return new WaitForSeconds(1f);
+
+			for (int i = _countDownStart; i >= 0; i--)
+			{
+				countDownText.text = i.ToString();
+
+                if (i == 0)
+                {
+					countDownText.text = "GO!";
+				}
+				yield return new WaitForSeconds(1f);
+			}
+			countDownPanel.SetActive(false);
+			noteTracks.SetActive(true);
+			StartSong();
+		}
+
+        private void StartSong()
+        {
+			//get dsptime
+			dsptimesong = (float)AudioSettings.dspTime;
+
+			//play song
+			_audioSource.Play();
+
+			_songStarted = true;
+		}
+
+        private void Update()
+        {
+			//for count down
+			if (!_songStarted) return;
+
+			//INSERT A PAUSE CHECK HERE IF NEEDED
+
+			//calculate songposition
+			//songposition = (float)(AudioSettings.dspTime - dsptimesong - pausedTime) * audioSource.pitch - songInfo.songOffset;
+			songposition = (float)(AudioSettings.dspTime - dsptimesong) * _audioSource.pitch;
+			//print (songposition);
+
+			//check if need to instantiate new Notes
+			float beatToShow = songposition / secondsPerBeat + BeatsShownOnScreen;
+
+			Debug.Log(beatToShow);
+
+			//check to see if the song reaches its end
+			if (songposition > songLength)
+			{
+				_songStarted = false;
+                songCompletedEvent?.Invoke();
+            }
+		}
+    }
 }
