@@ -1,4 +1,5 @@
-﻿using GameJam.Input;
+﻿using GameJam.DataAsset;
+using GameJam.Input;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,11 +21,13 @@ namespace GameJam.Core
         public CoreData CoreData;
         public InputController InputController;
 
+        //Game Data to Track
+        private SongInfo _currentSongLoaded;
+
         public CoreState CoreState { get; private set; }
 
         private void Awake()
         {
-            Debug.Log("CoreManager Is Awake");
             CoreData = CoreData.Instance;
             InputController = InputController.Instance;
         }
@@ -41,7 +44,7 @@ namespace GameJam.Core
 
         void Start()
         {
-            Debug.Log("CoreManager Start");
+            //Debug.Log("CoreManager Start");
         }
 
         void Update()
@@ -51,10 +54,26 @@ namespace GameJam.Core
 
         public void SetGameState(CoreState state)
         {
-            Debug.LogError("Changing State to " + state);
+            //Debug.LogError("Changing State to " + state);
             CoreState = state;
             OnStateChange?.Invoke();
         }
+
+        //Player Actions Log / Set Player Data
+        public void SetCurrentSong(SongInfo newSongInfo)
+        {
+            //Trigger From Level - Set Song Info Here
+            _currentSongLoaded = newSongInfo;
+        }
+
+        public SongInfo GetCurrentSong()
+        {
+            //DEBUG - load only song available
+            _currentSongLoaded = CoreData.SongDictionary["Song1"];
+
+            return _currentSongLoaded;
+        }
+
 
         private void OnDisable()
         {

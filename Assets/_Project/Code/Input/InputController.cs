@@ -20,7 +20,7 @@ namespace GameJam.Input
 
         private void Awake()
         {
-            Debug.Log("InputController Is Awake");
+            //Debug.Log("InputController Is Awake");
             _danceControls = new DanceMovementInput();
         }
 

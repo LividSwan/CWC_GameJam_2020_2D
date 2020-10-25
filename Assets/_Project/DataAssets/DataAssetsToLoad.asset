@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: DataAssetsToLoad
   m_EditorClassIdentifier: 
   GenericAssetsToLoadLabelName: default
+  SongsDataLabel: Songs
   NotePrefabsLabel: Notes

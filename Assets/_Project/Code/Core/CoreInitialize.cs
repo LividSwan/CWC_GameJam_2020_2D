@@ -40,11 +40,8 @@ namespace GameJam.Core
 
         private void HandleOnStateChange()
         {
-            Debug.LogError($"Current State is {_coreManager.CoreState}");
-
             if (_coreManager.CoreState == _gameStateToChangeTo)
             {
-                Debug.Log("Handling state change to " + _coreManager.CoreState);
                 ////DO STATE SPECIFIC TASKS HERE when it changes
                 LevelLoader.LoadLevelDebug = true;
                 StartCoroutine(LevelLoader.LoadNamedSceneAsync(_levelToLoad,
