@@ -3302,17 +3302,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121d8ee424bbfe248bb5b59860babb41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upButton0: {fileID: 8300000, guid: 3a21f1475ad53f94896dedcb8a4d3ac8, type: 3}
-  rightButton0: {fileID: 8300000, guid: 67f63e7ad6040004696cfc0080e9ca19, type: 3}
+  menuHover0: {fileID: 8300000, guid: e83a9adcee48ac642bfdb5f50bf22686, type: 3}
+  menuClick0: {fileID: 8300000, guid: 62d64891e72c638448e2de0845fce585, type: 3}
+  menuTheme0: {fileID: 8300000, guid: 676ef489f432f9d4cb587d3899bb0783, type: 3}
+  gameTheme0: {fileID: 8300000, guid: 676ef489f432f9d4cb587d3899bb0783, type: 3}
+  mistake: {fileID: 8300000, guid: 673fd0cd5107cf44a99b2ddf598081e6, type: 3}
+  battleTheme0: {fileID: 8300000, guid: 88b5a4c055ed8e3419347ddbcc025d56, type: 3}
   downButton0: {fileID: 8300000, guid: e30331cbcce663e4ab0fc00ffc12729c, type: 3}
   leftButton0: {fileID: 8300000, guid: 726fa7a191d9ed04c92fa93bf822c38c, type: 3}
-  mistake0: {fileID: 0}
-  menuHover0: {fileID: 0}
-  menuClick0: {fileID: 0}
-  menuTheme0: {fileID: 0}
-  gameTheme0: {fileID: 0}
-  danceTheme0: {fileID: 8300000, guid: 88b5a4c055ed8e3419347ddbcc025d56, type: 3}
-  danceTheme1: {fileID: 0}
+  rightButton0: {fileID: 8300000, guid: 67f63e7ad6040004696cfc0080e9ca19, type: 3}
+  upButton0: {fileID: 8300000, guid: 3a21f1475ad53f94896dedcb8a4d3ac8, type: 3}
+  battleTheme1: {fileID: 8300000, guid: 87d4f3d5508ca64458061c616552c1bc, type: 3}
+  downButton1: {fileID: 8300000, guid: a445c5a002509b841af9f0e478fecf92, type: 3}
+  leftButton1: {fileID: 8300000, guid: c7a095a2c54bb2b44aa99a8e121c838c, type: 3}
+  rightButton1: {fileID: 8300000, guid: 848d233b99cca60418279a5fa4fb98fe, type: 3}
+  upButton1: {fileID: 8300000, guid: dea97b6dfd8d88e4bae4bf7eefcc5e45, type: 3}
+  battleTheme2: {fileID: 8300000, guid: 812bcb03c9d66454fadabcc1e44f315d, type: 3}
+  downButton2: {fileID: 8300000, guid: 8802b013df8ac184880cd8c5d427f3b0, type: 3}
+  leftButton2: {fileID: 8300000, guid: 2f02be4eeb5d5c447b4d09e587c413a2, type: 3}
+  rightButton2: {fileID: 8300000, guid: d931aff3205a1574a9c0040e6f423f98, type: 3}
+  upButton2: {fileID: 8300000, guid: 1d81f7385f90f7f4d8486b3a63cbfd38, type: 3}
 --- !u!4 &2095719825
 Transform:
   m_ObjectHideFlags: 0
