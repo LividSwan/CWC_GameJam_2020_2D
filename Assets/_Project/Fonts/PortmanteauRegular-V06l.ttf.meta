@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 628b90062af163346b3141c732a31a4a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Portmanteau
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 87d3f30aaf035554d87a4a20b4f71172, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
