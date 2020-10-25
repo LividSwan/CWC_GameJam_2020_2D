@@ -1,55 +1,52 @@
 fileFormatVersion: 2
-guid: 2254c52535d0d7347bd4290f1fa5da6b
+guid: b2f3fcb184637c8469f07b1dead923fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8940713445051827906
-    second: Tilemaps Floor-Sheet_0
+      213: 1741260369569181249
+    second: BlackWalls_0
   - first:
-      213: 7930195238245595025
-    second: Tilemaps Floor-Sheet_1
+      213: 5497197245375599695
+    second: BlackWalls_1
   - first:
-      213: 6685023957654978607
-    second: Tilemaps Floor-Sheet_2
+      213: 1024836190810491521
+    second: BlackWalls_2
   - first:
-      213: -2496586743184475442
-    second: Tilemaps Floor-Sheet_3
+      213: -3020244837810711796
+    second: BlackWalls_3
   - first:
-      213: -5983099137429549421
-    second: Tilemaps Floor-Sheet_4
+      213: 5691719306932423451
+    second: BlackWalls_4
   - first:
-      213: 1701923960814296945
-    second: Tilemaps Floor-Sheet_5
+      213: 2715168480467845357
+    second: BlackWalls_5
   - first:
-      213: 564113311725194085
-    second: Tilemaps Floor-Sheet_6
+      213: 7674201696856445339
+    second: BlackWalls_6
   - first:
-      213: 420471609450454306
-    second: Tilemaps Floor-Sheet_7
+      213: 3605315301818361387
+    second: BlackWalls_7
   - first:
-      213: -2758209444850440328
-    second: Tilemaps Floor-Sheet_8
+      213: 5961874801355548011
+    second: BlackWalls_8
   - first:
-      213: 6666277348405248597
-    second: Tilemaps Floor-Sheet_9
+      213: 5496375068721559902
+    second: BlackWalls_9
   - first:
-      213: -1333623893557909453
-    second: Tilemaps Floor-Sheet_10
+      213: -5769281173381932098
+    second: BlackWalls_10
   - first:
-      213: -7958280019675650661
-    second: Tilemaps Floor-Sheet_11
+      213: -1276313461922452924
+    second: BlackWalls_11
   - first:
-      213: -6380677022745518673
-    second: Tilemaps Floor-Sheet_12
+      213: -649497464620767782
+    second: BlackWalls_12
   - first:
-      213: -8716506080121427098
-    second: Tilemaps Floor-Sheet_13
+      213: 7850867516561886752
+    second: BlackWalls_13
   - first:
-      213: -8607643263720117661
-    second: Tilemaps Floor-Sheet_14
-  - first:
-      213: 1337051229158772437
-    second: Tilemaps Floor-Sheet_15
+      213: 5281873670049335322
+    second: BlackWalls_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,11 +134,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_0
+      name: BlackWalls_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 160
+        x: 0
+        y: 608
         width: 32
         height: 32
       alignment: 0
@@ -151,18 +148,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e39702ddd743ce380800000000000000
-      internalID: -8940713445051827906
+      spriteID: 14ee2ad94133a2810800000000000000
+      internalID: 1741260369569181249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_1
+      name: BlackWalls_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 48
+        y: 608
         width: 32
         height: 32
       alignment: 0
@@ -172,18 +169,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1977f1f9d86bd0e60800000000000000
-      internalID: 7930195238245595025
+      spriteID: f445edee4c7f94c40800000000000000
+      internalID: 5497197245375599695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_2
+      name: BlackWalls_2
       rect:
         serializedVersion: 2
-        x: 97
-        y: 160
+        x: 96
+        y: 608
         width: 32
         height: 32
       alignment: 0
@@ -193,18 +190,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f204007eed9f5cc50800000000000000
-      internalID: 6685023957654978607
+      spriteID: 18a4932f513f83e00800000000000000
+      internalID: 1024836190810491521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_3
+      name: BlackWalls_3
       rect:
         serializedVersion: 2
-        x: 130
-        y: 160
+        x: 144
+        y: 608
         width: 32
         height: 32
       alignment: 0
@@ -214,18 +211,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca3a85a5975a5dd0800000000000000
-      internalID: -2496586743184475442
+      spriteID: c03d59b625fe516d0800000000000000
+      internalID: -3020244837810711796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_4
+      name: BlackWalls_4
       rect:
         serializedVersion: 2
-        x: 31
-        y: 127
+        x: 192
+        y: 608
         width: 32
         height: 32
       alignment: 0
@@ -235,18 +232,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ec099c803c7fca0800000000000000
-      internalID: -5983099137429549421
+      spriteID: b1b80fabd8c0dfe40800000000000000
+      internalID: 5691719306932423451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_5
+      name: BlackWalls_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 127
+        x: 0
+        y: 560
         width: 32
         height: 32
       alignment: 0
@@ -256,18 +253,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17fdf0f33d27e9710800000000000000
-      internalID: 1701923960814296945
+      spriteID: de08f9fe8573ea520800000000000000
+      internalID: 2715168480467845357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_6
+      name: BlackWalls_6
       rect:
         serializedVersion: 2
-        x: 97
-        y: 127
+        x: 48
+        y: 560
         width: 32
         height: 32
       alignment: 0
@@ -277,18 +274,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b0376711224d700800000000000000
-      internalID: 564113311725194085
+      spriteID: b9114db98cd308a60800000000000000
+      internalID: 7674201696856445339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_7
+      name: BlackWalls_7
       rect:
         serializedVersion: 2
-        x: 130
-        y: 127
+        x: 96
+        y: 560
         width: 32
         height: 32
       alignment: 0
@@ -298,60 +295,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22d5e6773b0d5d500800000000000000
-      internalID: 420471609450454306
+      spriteID: b26e92c4a27a80230800000000000000
+      internalID: 3605315301818361387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_8
+      name: BlackWalls_8
       rect:
         serializedVersion: 2
-        x: 163
-        y: 127
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 877ef8f9f1fd8b9d0800000000000000
-      internalID: -2758209444850440328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 127
-        width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5528dedcdef538c50800000000000000
-      internalID: 6666277348405248597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 94
+        x: 144
+        y: 560
         width: 32
         height: 32
       alignment: 0
@@ -361,18 +316,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338e18872240e7de0800000000000000
-      internalID: -1333623893557909453
+      spriteID: b6566226b85dcb250800000000000000
+      internalID: 5961874801355548011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_11
+      name: BlackWalls_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 94
+        x: 192
+        y: 560
         width: 32
         height: 32
       alignment: 0
@@ -382,18 +337,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b95e424ac728e8190800000000000000
-      internalID: -7958280019675650661
+      spriteID: e593673010c074c40800000000000000
+      internalID: 5496375068721559902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_12
+      name: BlackWalls_10
       rect:
         serializedVersion: 2
-        x: 97
-        y: 94
+        x: 0
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -403,18 +358,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fad91c8dd084377a0800000000000000
-      internalID: -6380677022745518673
+      spriteID: ebb983bf6556fefa0800000000000000
+      internalID: -5769281173381932098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_13
+      name: BlackWalls_11
       rect:
         serializedVersion: 2
-        x: 130
-        y: 94
+        x: 48
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -424,18 +379,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66b64d3f6efb80780800000000000000
-      internalID: -8716506080121427098
+      spriteID: 44a20182baf994ee0800000000000000
+      internalID: -1276313461922452924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_14
+      name: BlackWalls_12
       rect:
         serializedVersion: 2
-        x: 163
-        y: 94
+        x: 96
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -445,19 +400,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36aada09e028b8880800000000000000
-      internalID: -8607643263720117661
+      spriteID: ad523c24f758cf6f0800000000000000
+      internalID: -649497464620767782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemaps Floor-Sheet_15
+      name: BlackWalls_13
       rect:
         serializedVersion: 2
-        x: 196
-        y: 94
-        width: 33
+        x: 144
+        y: 512
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,8 +421,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5de028842092e8210800000000000000
-      internalID: 1337051229158772437
+      spriteID: 02e035f1962e3fc60800000000000000
+      internalID: 7850867516561886752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackWalls_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1887cb4e1cfc4940800000000000000
+      internalID: 5281873670049335322
       vertices: []
       indices: 
       edges: []
