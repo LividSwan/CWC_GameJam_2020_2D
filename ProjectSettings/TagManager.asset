@@ -48,3 +48,6 @@ TagManager:
   - name: Background
     uniqueID: 3153187607
     locked: 0
+  - name: Stairs
+    uniqueID: 2340613777
+    locked: 0
