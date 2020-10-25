@@ -1,4 +1,5 @@
 ﻿using GameJam.DataAsset;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,14 +21,13 @@ namespace GameJam.Core
 
         private DataAssetsToLoad _dataAssetsToLoad;
 
+        public Dictionary<string, SongInfo> SongDictionary = new Dictionary<string, SongInfo>();
+
         protected CoreData() { }
 
         private async void Awake()
         {
-            Debug.Log("CoreData is Awake");
-            //coreManager = CoreManager.Instance;
             coreDataLoaded = false;
-
             await LoadCoreDataDefaults();
         }
 
@@ -35,7 +35,7 @@ namespace GameJam.Core
         {
             await GetDataAssetsToLoadAsync();
 
-            //Task task1 = LoadSystemsSettings();
+            Task task1 = LoadSongsData();
             //Task task2 = LoadSpriteSheetData();
             //Task task3 = LoadBackstoryData();
             //Task task4 = LoadMercenaryDefaults();
@@ -45,10 +45,9 @@ namespace GameJam.Core
 
             //await Task.WhenAll(task1, task2, task3, task4, gameDataTask);
 
-            //await Task.WhenAll(task1);
+            await Task.WhenAll(task1);
 
             coreDataLoaded = true;
-            Debug.Log("CoreData has LOADED from AWAKE");
             OnDataLoadComplete?.Invoke();
         }
 
@@ -63,5 +62,23 @@ namespace GameJam.Core
             Debug.Log("DataAssetsToLoad == LOADED");
         }
 
+        private async Task LoadSongsData()
+        {
+            AsyncOperationHandle<IList<SongInfo>> songDataHandle = Addressables.LoadAssetsAsync<SongInfo>(_dataAssetsToLoad.SongsDataLabel, LoadSongsCompleted);
+            await songDataHandle.Task;
+
+            foreach (var item in SongDictionary)
+            {
+                Debug.Log(item.Key);
+            }
+        }
+
+        private void LoadSongsCompleted(SongInfo songDataObject)
+        {
+            if (!SongDictionary.ContainsKey(songDataObject.SongName))
+            {
+                SongDictionary.Add(songDataObject.SongName, songDataObject);
+            }
+        }
     }
 }

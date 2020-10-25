@@ -51,7 +51,7 @@ namespace GameJam.Rhythm
             {
                 case "w":
                 case "upArrow":
-                    Debug.Log("UP (w) Arrow pressed");
+                    //Debug.Log("UP (w) Arrow pressed");
                     break;
                 case "s":
                 case "downArrow":
