@@ -24,7 +24,6 @@ namespace GameJam.UI
 
         public void Awake()
         {
-            Debug.Log("MainMenu UI is Awake");
             _coreManager = CoreManager.Instance;
 
             background = GameObject.Find("Background");
@@ -48,13 +47,13 @@ namespace GameJam.UI
         IEnumerator StartGame()
         {
             //Print the time of when the function is first called.
-            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+            //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(3f);
 
             //After we have waited 3 seconds print the time again.
-            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+            //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
 
             LevelLoader.LoadLevelDebug = true;
             StartCoroutine(LevelLoader.LoadNamedSceneAsync(startSceneToLoad,
