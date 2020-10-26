@@ -38,7 +38,7 @@ namespace GameJam.Core
         {
             for (int i = 0; i < count; i++)
             {
-                var newObject = GameObject.Instantiate(_prefab);
+                var newObject = GameObject.Instantiate(_prefab, this.transform, true);
                 newObject.gameObject.SetActive(false);
                 _objectsQueue.Enqueue(newObject);
             }
