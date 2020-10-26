@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87d223ac6e2c1164ea33e70c47ab2a62, type: 3}
-  m_Name: SongInfo_01
+  m_Name: SongInfo_0
   m_EditorClassIdentifier: 
-  _id: 2
-  _loreTextList: []
-  SongName: Battle1
-  SongAudioClip: {fileID: 8300000, guid: 87d4f3d5508ca64458061c616552c1bc, type: 3}
-  _beatTempo: 160
+  _id: 1
+  _loreTextList:
+  - The Rose Dances For Us
+  - The Rose Calls For US
+  SongName: Battle0
+  SongAudioClip: {fileID: 8300000, guid: 88b5a4c055ed8e3419347ddbcc025d56, type: 3}
+  _beatTempo: 140

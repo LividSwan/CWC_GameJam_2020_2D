@@ -69,7 +69,7 @@ namespace GameJam.Core
         public SongInfo GetCurrentSong()
         {
             //DEBUG - load only song available
-            _currentSongLoaded = CoreData.SongDictionary["Song1"];
+            _currentSongLoaded = CoreData.SongDictionary["Battle1"];
 
             return _currentSongLoaded;
         }

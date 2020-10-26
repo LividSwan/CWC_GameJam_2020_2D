@@ -12,9 +12,8 @@ namespace GameJam.Rhythm
     {
 		private CoreManager _coreManager;
 
-
-
 		public enum Rank { PERFECT, GOOD, BAD, MISS };
+		public enum ArrowDirection { UP, DOWN, LEFT, RIGHT };
 
 		public delegate void BeatOnHitAction(int trackNumber, Rank rank);
 		public static event BeatOnHitAction beatOnHitEvent;
@@ -25,17 +24,12 @@ namespace GameJam.Rhythm
 
 		private float songLength;
 
-		//if the whole game is paused
-		public static bool paused = true;
 		private bool _songStarted = false;
-
-		public static float pauseTimeStamp = -1f; //negative means not managed
-		private float pausedTime = 0f;
 
 		private SongInfo _songInfo;
 
 		[Header("Spawn Points")]
-		public float trackSpawnPosY;
+		public float[] trackSpawnPosY;
 
 		public float startLineX;
 		public float finishLineX;
@@ -56,6 +50,7 @@ namespace GameJam.Rhythm
 
 		[Header("Note Tracks")]
 		public GameObject noteTracks;
+		public NotePool notePool;
 
 		//current song position
 		public static float songposition;
@@ -67,14 +62,22 @@ namespace GameJam.Rhythm
 
 		public static float BeatsShownOnScreen = 4f;
 
-		
+		public int spawnedNotesCount;
 
 		private AudioSource _audioSource;
 
-        private void Awake()
+		private float beatTimer = 0f;
+		private float beatCounter = 0f;
+
+		private System.Random random = new System.Random();
+		private Array _arrowDirections;
+
+		private void Awake()
         {
 			_coreManager = CoreManager.Instance;
 			_audioSource = GetComponent<AudioSource>();
+
+			_arrowDirections = Enum.GetValues(typeof(ArrowDirection));
 		}
 
         private void Start()
@@ -82,6 +85,8 @@ namespace GameJam.Rhythm
 			//display countdown canvas
 			countDownPanel.SetActive(true);
 			noteTracks.SetActive(false);
+
+			spawnedNotesCount = 0;
 
 			//get the song info from Manager
 			_songInfo = _coreManager.GetCurrentSong();
@@ -140,9 +145,36 @@ namespace GameJam.Rhythm
 			//print (songposition);
 
 			//check if need to instantiate new Notes
-			float beatToShow = songposition / secondsPerBeat + BeatsShownOnScreen;
+			//float beatToShow = songposition / secondsPerBeat + BeatsShownOnScreen;
 
-			Debug.Log(beatToShow);
+			beatTimer += Time.deltaTime;
+
+			int randomIndex = UnityEngine.Random.Range(0, trackSpawnPosY.Length+1);
+			
+			if (beatTimer > secondsPerBeat && beatCounter < 6f)
+			{
+				var index = random.Next(_arrowDirections.Length);
+				ArrowDirection randomArrow = (ArrowDirection)_arrowDirections.GetValue(index);
+
+				Note newNote = notePool.Get();
+                newNote.SpawnNote(randomArrow,
+                    new Vector3(startLineX, trackSpawnPosY[randomIndex]),
+                    _songInfo._beatTempo,
+                    removeLineX);
+				
+				beatCounter++;
+				spawnedNotesCount++;
+			}
+
+			if (beatTimer >= secondsPerBeat)
+			{
+				beatTimer = 0f;
+			}
+
+            if (beatCounter > 5f)
+			{
+				StartCoroutine(SkipBeat());
+            }
 
 			//check to see if the song reaches its end
 			if (songposition > songLength)
@@ -151,5 +183,11 @@ namespace GameJam.Rhythm
                 songCompletedEvent?.Invoke();
             }
 		}
-    }
+
+		IEnumerator SkipBeat()
+		{
+			yield return new WaitForSeconds(2f);
+			beatCounter = 0f;
+		}
+	}
 }
